@@ -11,9 +11,14 @@ struct CoordinatorView: View {
     @StateObject var coordinator = Coordinator()
     
     var body: some View {
-        NavigationStack(path: $coordinator.path) {
-            coordinator.view(for: coordinator.root)
+        VStack {
+            NavigationStack(path: $coordinator.path) {
+                coordinator.view(for: coordinator.root)
+            }
+            Spacer()
+            MenuBar()
         }
+        .environmentObject(coordinator)
     }
 }
 

@@ -13,6 +13,9 @@
 		FA6C10962BA1E4BE007554C6 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6C10952BA1E4BE007554C6 /* Coordinator.swift */; };
 		FA6C10992BA1E587007554C6 /* CoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6C10982BA1E587007554C6 /* CoordinatorView.swift */; };
 		FA6C109B2BA1EC04007554C6 /* MenuBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6C109A2BA1EC04007554C6 /* MenuBar.swift */; };
+		FA6C109F2BA1ECD9007554C6 /* MenuBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6C109E2BA1ECD9007554C6 /* MenuBarButton.swift */; };
+		FA6C10A12BA1ED4A007554C6 /* DrawingConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6C10A02BA1ED4A007554C6 /* DrawingConstants.swift */; };
+		FA6C10A32BA1F1CD007554C6 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6C10A22BA1F1CD007554C6 /* Fonts.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +26,9 @@
 		FA6C10952BA1E4BE007554C6 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		FA6C10982BA1E587007554C6 /* CoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorView.swift; sourceTree = "<group>"; };
 		FA6C109A2BA1EC04007554C6 /* MenuBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBar.swift; sourceTree = "<group>"; };
+		FA6C109E2BA1ECD9007554C6 /* MenuBarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarButton.swift; sourceTree = "<group>"; };
+		FA6C10A02BA1ED4A007554C6 /* DrawingConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingConstants.swift; sourceTree = "<group>"; };
+		FA6C10A22BA1F1CD007554C6 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +99,8 @@
 			children = (
 				FA6C109D2BA1EC69007554C6 /* Pages */,
 				FA6C109C2BA1EC5A007554C6 /* Components */,
+				FA6C10A02BA1ED4A007554C6 /* DrawingConstants.swift */,
+				FA6C10A22BA1F1CD007554C6 /* Fonts.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -110,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				FA6C109A2BA1EC04007554C6 /* MenuBar.swift */,
+				FA6C109E2BA1ECD9007554C6 /* MenuBarButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -191,9 +200,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA6C10A32BA1F1CD007554C6 /* Fonts.swift in Sources */,
 				FA6C10852BA1DE54007554C6 /* EffectiveMobileTestApp.swift in Sources */,
 				FA6C10962BA1E4BE007554C6 /* Coordinator.swift in Sources */,
 				FA6C109B2BA1EC04007554C6 /* MenuBar.swift in Sources */,
+				FA6C109F2BA1ECD9007554C6 /* MenuBarButton.swift in Sources */,
+				FA6C10A12BA1ED4A007554C6 /* DrawingConstants.swift in Sources */,
 				FA6C10992BA1E587007554C6 /* CoordinatorView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
