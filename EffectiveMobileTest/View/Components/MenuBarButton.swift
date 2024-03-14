@@ -30,7 +30,7 @@ struct MenuBarButton: View {
             .frame(
                 height: DrawingConstants.MenuBar.height)
         }
-        .foregroundStyle(.secondary)
+        .foregroundStyle(isActiveTab ? Color.accentColor : .secondary)
     }
 }
 
