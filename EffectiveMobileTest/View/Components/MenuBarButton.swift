@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct MenuBarButton: View {
-    let tab: MenuBar.Tab
+    let tab: Coordinator.Page
     let isActiveTab: Bool
     let tapAction: () -> Void
     
@@ -23,7 +23,7 @@ struct MenuBarButton: View {
                         width: DrawingConstants.MenuBar.imageSize,
                         height: DrawingConstants.MenuBar.imageSize
                     )
-                Text(tab.rawValue.localizedCapitalized)
+                Text(tab.name.localizedCapitalized)
                     .font(.tabText())
             }
             

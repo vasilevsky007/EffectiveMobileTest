@@ -9,7 +9,7 @@ import SwiftUI
 
 class Coordinator: ObservableObject {
     enum Page: String, Identifiable {
-        case login, loginCode, search, vacancy, favourites
+        case login, loginCode, search, vacancy, favourites, responses, messages, profile
         
         var id: String {
             self.rawValue
@@ -34,23 +34,54 @@ class Coordinator: ObservableObject {
         path.removeLast(path.count)
     }
     
-    func changeRoot(to page: Page) {
-        path.removeLast(path.count)
-        root = page
+    func changeTab(to page: Page) {
+        if root != .login && root != .loginCode {
+            path.removeLast(path.count)
+            root = page
+        }
     }
     
     @ViewBuilder func view (for page: Page) -> some View {
         switch page {
         case .login:
-            EmptyView()
+            Text(page.name)
         case .loginCode:
-            EmptyView()
+            Text(page.name)
         case .search:
-            EmptyView()
+            Text(page.name)
         case .vacancy:
-            EmptyView()
+            Text(page.name)
         case .favourites:
-            EmptyView()
+            Text(page.name)
+        case .responses:
+            Text(page.name)
+        case .messages:
+            Text(page.name)
+        case .profile:
+            Text(page.name)
+        }
+    }
+}
+
+extension Coordinator.Page {
+    var name: String {
+        switch self {
+        case .login:
+            return "вход в личный кабинет"
+        case .loginCode:
+            return ""
+        case .search:
+            return "поиск"
+        case .vacancy:
+            return ""
+        case .favourites:
+            return "избранное"
+        case .responses:
+            return "отклики"
+        case .messages:
+            return "сообщения"
+        case .profile:
+            return "профиль"
         }
     }
 }

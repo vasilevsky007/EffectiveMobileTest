@@ -167,11 +167,11 @@
 			};
 			buildConfigurationList = FA6C107C2BA1DE54007554C6 /* Build configuration list for PBXProject "EffectiveMobileTest" */;
 			compatibilityVersion = "Xcode 14.0";
-			developmentRegion = en;
+			developmentRegion = ru;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
+				ru,
 			);
 			mainGroup = FA6C10782BA1DE54007554C6;
 			productRefGroup = FA6C10822BA1DE54007554C6 /* Products */;

@@ -10,8 +10,10 @@ import SwiftUI
 struct MenuBar: View {
     @EnvironmentObject var coordinator: Coordinator
     
-    var activeTab: Tab? {
-        return Tab(rawValue: coordinator.root.rawValue)
+    var tabs: [Coordinator.Page] = [.search, .favourites, .responses, .messages, .profile]
+    
+    var activeTab: Coordinator.Page? {
+        return tabs.contains(coordinator.root) ? coordinator.root : nil
     }
     
     var body: some View {
@@ -22,32 +24,20 @@ struct MenuBar: View {
                     spacing: nil,
                     alignment: .center
                 ),
-                count: Tab.allCases.count
+                count: tabs.count
             ),
             alignment: .center,
             spacing: 0,
             content: {
-                ForEach(Tab.allCases) { tab in
+                ForEach(tabs) { tab in
                     MenuBarButton(
                         tab: tab,
                         isActiveTab: activeTab == tab
                     ) {
-                        if (activeTab != tab) {
-                            guard let page = Coordinator.Page(rawValue: tab.rawValue) else { return }
-                            coordinator.changeRoot(to: page)
-                        }
+                        coordinator.changeTab(to: tab)
                     }
                 }
         })
-    }
-}
-
-extension MenuBar {
-    enum Tab: String, Identifiable, CaseIterable {
-        case search, favourites, responses, messages, profile
-        var id: String {
-            self.rawValue
-        }
     }
 }
 
