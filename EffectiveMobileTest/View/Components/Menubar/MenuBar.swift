@@ -27,17 +27,17 @@ struct MenuBar: View {
                 count: tabs.count
             ),
             alignment: .center,
-            spacing: 0,
-            content: {
-                ForEach(tabs) { tab in
-                    MenuBarButton(
-                        tab: tab,
-                        isActiveTab: activeTab == tab
-                    ) {
-                        coordinator.changeTab(to: tab)
-                    }
+            spacing: 0
+        ) {
+            ForEach(tabs) { tab in
+                MenuBarButton(
+                    tab: tab,
+                    isActiveTab: activeTab == tab
+                ) {
+                    coordinator.changeTab(to: tab)
                 }
-        })
+            }
+        }
     }
 }
 

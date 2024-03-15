@@ -16,6 +16,14 @@
 		FA6C109F2BA1ECD9007554C6 /* MenuBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6C109E2BA1ECD9007554C6 /* MenuBarButton.swift */; };
 		FA6C10A12BA1ED4A007554C6 /* DrawingConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6C10A02BA1ED4A007554C6 /* DrawingConstants.swift */; };
 		FA6C10A32BA1F1CD007554C6 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6C10A22BA1F1CD007554C6 /* Fonts.swift */; };
+		FA6C10A52BA31347007554C6 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6C10A42BA31347007554C6 /* LoginView.swift */; };
+		FA6C10A82BA31764007554C6 /* EmployeeLoginForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6C10A72BA31764007554C6 /* EmployeeLoginForm.swift */; };
+		FA6C10AA2BA317D3007554C6 /* EmployerLoginForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6C10A92BA317D3007554C6 /* EmployerLoginForm.swift */; };
+		FA6C10AE2BA31B99007554C6 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6C10AD2BA31B99007554C6 /* RoundedButton.swift */; };
+		FA6C10B32BA3796C007554C6 /* EmailAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6C10B22BA3796C007554C6 /* EmailAddress.swift */; };
+		FA6C10B72BA38131007554C6 /* PrettyTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6C10B62BA38131007554C6 /* PrettyTextField.swift */; };
+		FA6C10B92BA3B6D0007554C6 /* StrokeText.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6C10B82BA3B6D0007554C6 /* StrokeText.swift */; };
+		FA6C10BB2BA473F3007554C6 /* CapsuleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6C10BA2BA473F3007554C6 /* CapsuleButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +37,14 @@
 		FA6C109E2BA1ECD9007554C6 /* MenuBarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarButton.swift; sourceTree = "<group>"; };
 		FA6C10A02BA1ED4A007554C6 /* DrawingConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingConstants.swift; sourceTree = "<group>"; };
 		FA6C10A22BA1F1CD007554C6 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		FA6C10A42BA31347007554C6 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		FA6C10A72BA31764007554C6 /* EmployeeLoginForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeLoginForm.swift; sourceTree = "<group>"; };
+		FA6C10A92BA317D3007554C6 /* EmployerLoginForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployerLoginForm.swift; sourceTree = "<group>"; };
+		FA6C10AD2BA31B99007554C6 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		FA6C10B22BA3796C007554C6 /* EmailAddress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailAddress.swift; sourceTree = "<group>"; };
+		FA6C10B62BA38131007554C6 /* PrettyTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrettyTextField.swift; sourceTree = "<group>"; };
+		FA6C10B82BA3B6D0007554C6 /* StrokeText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrokeText.swift; sourceTree = "<group>"; };
+		FA6C10BA2BA473F3007554C6 /* CapsuleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapsuleButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +81,7 @@
 				FA6C10932BA1DE9E007554C6 /* ViewModel */,
 				FA6C10942BA1DEAB007554C6 /* View */,
 				FA6C10972BA1E561007554C6 /* Coordinator */,
+				FA6C10B12BA3760D007554C6 /* Helpers */,
 				FA6C10842BA1DE54007554C6 /* EffectiveMobileTestApp.swift */,
 				FA6C10882BA1DE56007554C6 /* Assets.xcassets */,
 				FA6C108A2BA1DE56007554C6 /* Preview Content */,
@@ -83,6 +100,7 @@
 		FA6C10922BA1DE92007554C6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				FA6C10B22BA3796C007554C6 /* EmailAddress.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -117,8 +135,9 @@
 		FA6C109C2BA1EC5A007554C6 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				FA6C109A2BA1EC04007554C6 /* MenuBar.swift */,
-				FA6C109E2BA1ECD9007554C6 /* MenuBarButton.swift */,
+				FA6C10AC2BA31B86007554C6 /* Controls */,
+				FA6C10A62BA31720007554C6 /* Menubar */,
+				FA6C10AB2BA317D9007554C6 /* Login */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -126,8 +145,45 @@
 		FA6C109D2BA1EC69007554C6 /* Pages */ = {
 			isa = PBXGroup;
 			children = (
+				FA6C10A42BA31347007554C6 /* LoginView.swift */,
 			);
 			path = Pages;
+			sourceTree = "<group>";
+		};
+		FA6C10A62BA31720007554C6 /* Menubar */ = {
+			isa = PBXGroup;
+			children = (
+				FA6C109A2BA1EC04007554C6 /* MenuBar.swift */,
+				FA6C109E2BA1ECD9007554C6 /* MenuBarButton.swift */,
+			);
+			path = Menubar;
+			sourceTree = "<group>";
+		};
+		FA6C10AB2BA317D9007554C6 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				FA6C10A72BA31764007554C6 /* EmployeeLoginForm.swift */,
+				FA6C10A92BA317D3007554C6 /* EmployerLoginForm.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		FA6C10AC2BA31B86007554C6 /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				FA6C10B62BA38131007554C6 /* PrettyTextField.swift */,
+				FA6C10AD2BA31B99007554C6 /* RoundedButton.swift */,
+				FA6C10BA2BA473F3007554C6 /* CapsuleButton.swift */,
+			);
+			path = Controls;
+			sourceTree = "<group>";
+		};
+		FA6C10B12BA3760D007554C6 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				FA6C10B82BA3B6D0007554C6 /* StrokeText.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,13 +256,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA6C10B92BA3B6D0007554C6 /* StrokeText.swift in Sources */,
+				FA6C10BB2BA473F3007554C6 /* CapsuleButton.swift in Sources */,
 				FA6C10A32BA1F1CD007554C6 /* Fonts.swift in Sources */,
 				FA6C10852BA1DE54007554C6 /* EffectiveMobileTestApp.swift in Sources */,
+				FA6C10AA2BA317D3007554C6 /* EmployerLoginForm.swift in Sources */,
 				FA6C10962BA1E4BE007554C6 /* Coordinator.swift in Sources */,
 				FA6C109B2BA1EC04007554C6 /* MenuBar.swift in Sources */,
 				FA6C109F2BA1ECD9007554C6 /* MenuBarButton.swift in Sources */,
+				FA6C10AE2BA31B99007554C6 /* RoundedButton.swift in Sources */,
 				FA6C10A12BA1ED4A007554C6 /* DrawingConstants.swift in Sources */,
+				FA6C10B72BA38131007554C6 /* PrettyTextField.swift in Sources */,
+				FA6C10A52BA31347007554C6 /* LoginView.swift in Sources */,
+				FA6C10A82BA31764007554C6 /* EmployeeLoginForm.swift in Sources */,
 				FA6C10992BA1E587007554C6 /* CoordinatorView.swift in Sources */,
+				FA6C10B32BA3796C007554C6 /* EmailAddress.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

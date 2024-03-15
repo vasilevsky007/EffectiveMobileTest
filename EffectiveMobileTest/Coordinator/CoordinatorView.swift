@@ -11,14 +11,23 @@ struct CoordinatorView: View {
     @StateObject var coordinator = Coordinator()
     
     var body: some View {
-        VStack {
+        VStack(spacing: DrawingConstants.standardSpacing) {
             NavigationStack(path: $coordinator.path) {
                 coordinator.view(for: coordinator.root)
+                    .padding(.horizontal, DrawingConstants.doubleSpacing)
+                    .background(.pageBackground)
+                    .navigationDestination(for: Coordinator.Page.self) { page in
+                        coordinator.view(for: page)
+                    }
             }
-            Spacer()
+                
+            Divider()
             MenuBar()
+                .ignoresSafeArea(.keyboard)
         }
         .environmentObject(coordinator)
+        .ignoresSafeArea(.keyboard)
+        .background(.pageBackground)
     }
 }
 

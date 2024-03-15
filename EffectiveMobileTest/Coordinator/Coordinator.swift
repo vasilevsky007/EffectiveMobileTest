@@ -44,7 +44,7 @@ class Coordinator: ObservableObject {
     @ViewBuilder func view (for page: Page) -> some View {
         switch page {
         case .login:
-            Text(page.name)
+            LoginView()
         case .loginCode:
             Text(page.name)
         case .search:
@@ -67,7 +67,7 @@ extension Coordinator.Page {
     var name: String {
         switch self {
         case .login:
-            return "вход в личный кабинет"
+            return "Вход в личный кабинет"
         case .loginCode:
             return ""
         case .search:
