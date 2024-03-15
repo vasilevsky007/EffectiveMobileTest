@@ -31,4 +31,8 @@ struct DrawingConstants {
     struct PillowButton {
         static let height: CGFloat = 32
     }
+    
+    struct VerificationCodeBox {
+        static let size: CGFloat = 48
+    }
 }

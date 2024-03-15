@@ -9,9 +9,10 @@
 import SwiftUI
 
 struct EmployeeLoginForm: View {
-    @EnvironmentObject var coordinator: Coordinator
+    @EnvironmentObject private var coordinator: Coordinator
+    @EnvironmentObject private var app: WorkAppSwiftUI
     
-    @State var email = ""
+    @State var email = "alex.vasilevski007@gmail.com"
     @State var error: String?
     
     var body: some View {
@@ -56,15 +57,14 @@ struct EmployeeLoginForm: View {
     }
     
     private func submitAction() {
-        if EmailAddress(rawValue: email) == nil {
+        if let email = EmailAddress(rawValue: email) {
             withAnimation {
-                error = "Вы ввели неверный e-mail"
+                app.startUserAuthentication(with: email)
+                coordinator.push(.loginCode)
             }
         } else {
             withAnimation {
-                print("asfdfk")
-                coordinator.push(.loginCode)
-                print(coordinator.path)
+                error = "Вы ввели неверный e-mail"
             }
         }
     }

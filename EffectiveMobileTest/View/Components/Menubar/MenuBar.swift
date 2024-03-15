@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct MenuBar: View {
-    @EnvironmentObject var coordinator: Coordinator
+    @EnvironmentObject private var coordinator: Coordinator
+    @EnvironmentObject private var app: WorkAppSwiftUI
     
     var tabs: [Coordinator.Page] = [.search, .favourites, .responses, .messages, .profile]
     
@@ -34,7 +35,9 @@ struct MenuBar: View {
                     tab: tab,
                     isActiveTab: activeTab == tab
                 ) {
-                    coordinator.changeTab(to: tab)
+                    if app.isAuthenticated {
+                        coordinator.changeTab(to: tab)
+                    }
                 }
             }
         }

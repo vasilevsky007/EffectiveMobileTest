@@ -23,19 +23,25 @@ class Coordinator: ObservableObject {
     @Published var root = Page.login
     
     func push(_ page: Page) {
-        path.append(page)
+        withAnimation{
+            path.append(page)
+        }
     }
     
     func pop() {
-        path.removeLast()
+        withAnimation {
+            path.removeLast()
+        }
     }
     
     func popToRoot() {
-        path.removeLast(path.count)
+        withAnimation {
+            path.removeLast(path.count)
+        }
     }
     
     func changeTab(to page: Page) {
-        if root != .login && root != .loginCode {
+        withAnimation {
             path.removeLast(path.count)
             root = page
         }
@@ -46,7 +52,7 @@ class Coordinator: ObservableObject {
         case .login:
             LoginView()
         case .loginCode:
-            Text(page.name)
+            LoginCodeView()
         case .search:
             Text(page.name)
         case .vacancy:

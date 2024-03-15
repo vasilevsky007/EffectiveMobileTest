@@ -35,4 +35,7 @@ extension Font {
     static func number () -> Font {
         .system(size: 7, weight: .regular)
     }
+    static func code () -> Font {
+        .system(size: 24, weight: .medium)
+    }
 }
