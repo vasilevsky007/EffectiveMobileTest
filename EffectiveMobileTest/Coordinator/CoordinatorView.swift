@@ -12,7 +12,7 @@ struct CoordinatorView: View {
     @StateObject var app = WorkAppSwiftUI()
     
     var body: some View {
-        VStack(spacing: DrawingConstants.standardSpacing) {
+        VStack(spacing: 0) {
             NavigationStack(path: $coordinator.path) {
                 coordinator.view(for: coordinator.root)
                     .padding(.horizontal, DrawingConstants.doubleSpacing)
@@ -25,6 +25,7 @@ struct CoordinatorView: View {
             }
                 
             Divider()
+                .padding(.bottom,DrawingConstants.standardSpacing)
             MenuBar()
                 .ignoresSafeArea(.keyboard)
         }

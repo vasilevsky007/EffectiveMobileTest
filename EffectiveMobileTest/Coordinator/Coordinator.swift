@@ -54,7 +54,7 @@ class Coordinator: ObservableObject {
         case .loginCode:
             LoginCodeView()
         case .search:
-            Text(page.name)
+            SearchView()
         case .vacancy:
             Text(page.name)
         case .favourites:

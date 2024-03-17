@@ -21,6 +21,8 @@ struct VacanciesWebRepository {
         try? await Task.sleep(for: .seconds(1))
         let url = WebAPI.endpoint
         let (receivedData, response) = try await session.data(from: url)
+        let a = try JSONSerialization.jsonObject(with: receivedData)
+        print(a)
         let dataDecoded = try decoder.decode(WebAPI.VacanciesResponse.self, from: receivedData)
         return dataDecoded.vacancies
     }

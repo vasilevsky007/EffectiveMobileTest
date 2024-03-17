@@ -12,7 +12,7 @@ struct EmployeeLoginForm: View {
     @EnvironmentObject private var coordinator: Coordinator
     @EnvironmentObject private var app: WorkAppSwiftUI
     
-    @State var email = "alex.vasilevski007@gmail.com"
+    @State var email = ""
     @State var error: String?
     
     var body: some View {
@@ -44,7 +44,7 @@ struct EmployeeLoginForm: View {
         }
         .padding(.horizontal, DrawingConstants.doubleSpacing)
         .padding(.vertical, DrawingConstants.tripleSpacing)
-        .background(Color.blockBackground, in: RoundedRectangle(cornerRadius: 10))
+        .background(Color.blockBackground, in: RoundedRectangle(cornerRadius: DrawingConstants.blockCornerRadius))
         .onChange(of: email) {
             withAnimation {
                 error = nil

@@ -39,6 +39,7 @@ struct MenuBar: View {
                         coordinator.changeTab(to: tab)
                     }
                 }
+                .numberSticker(number: tab == .favourites ? app.favouritesNumber : 0)
             }
         }
     }

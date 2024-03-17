@@ -28,6 +28,15 @@
 		FA6C10BF2BA47BF8007554C6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6C10BE2BA47BF8007554C6 /* User.swift */; };
 		FA6C10C12BA47D52007554C6 /* WorkAppSwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6C10C02BA47D52007554C6 /* WorkAppSwiftUI.swift */; };
 		FA6C10C32BA48B09007554C6 /* VerificationCodeBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6C10C22BA48B09007554C6 /* VerificationCodeBox.swift */; };
+		FA6C10C52BA7172D007554C6 /* VacanciesWebRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6C10C42BA7172D007554C6 /* VacanciesWebRepository.swift */; };
+		FA6C10C72BA71A3D007554C6 /* Vacancy.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6C10C62BA71A3D007554C6 /* Vacancy.swift */; };
+		FA6C10C92BA71F7E007554C6 /* WebAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6C10C82BA71F7E007554C6 /* WebAPI.swift */; };
+		FA6C10CD2BA724E2007554C6 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6C10CC2BA724E2007554C6 /* SearchView.swift */; };
+		FA6C10CF2BA72664007554C6 /* Loadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6C10CE2BA72664007554C6 /* Loadable.swift */; };
+		FA6C10D32BA7382E007554C6 /* VacancyBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6C10D22BA7382E007554C6 /* VacancyBlock.swift */; };
+		FA6C10D52BA75D62007554C6 /* NumberSticker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6C10D42BA75D62007554C6 /* NumberSticker.swift */; };
+		FA6C10D72BA767D1007554C6 /* SmallRoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6C10D62BA767D1007554C6 /* SmallRoundedButton.swift */; };
+		FA6C10DC2BA76E07007554C6 /* OfferBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6C10DB2BA76E07007554C6 /* OfferBlock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +62,15 @@
 		FA6C10BE2BA47BF8007554C6 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		FA6C10C02BA47D52007554C6 /* WorkAppSwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkAppSwiftUI.swift; sourceTree = "<group>"; };
 		FA6C10C22BA48B09007554C6 /* VerificationCodeBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationCodeBox.swift; sourceTree = "<group>"; };
+		FA6C10C42BA7172D007554C6 /* VacanciesWebRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VacanciesWebRepository.swift; sourceTree = "<group>"; };
+		FA6C10C62BA71A3D007554C6 /* Vacancy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vacancy.swift; sourceTree = "<group>"; };
+		FA6C10C82BA71F7E007554C6 /* WebAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebAPI.swift; sourceTree = "<group>"; };
+		FA6C10CC2BA724E2007554C6 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		FA6C10CE2BA72664007554C6 /* Loadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loadable.swift; sourceTree = "<group>"; };
+		FA6C10D22BA7382E007554C6 /* VacancyBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VacancyBlock.swift; sourceTree = "<group>"; };
+		FA6C10D42BA75D62007554C6 /* NumberSticker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberSticker.swift; sourceTree = "<group>"; };
+		FA6C10D62BA767D1007554C6 /* SmallRoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallRoundedButton.swift; sourceTree = "<group>"; };
+		FA6C10DB2BA76E07007554C6 /* OfferBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferBlock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +128,8 @@
 			children = (
 				FA6C10B22BA3796C007554C6 /* EmailAddress.swift */,
 				FA6C10BE2BA47BF8007554C6 /* User.swift */,
+				FA6C10C62BA71A3D007554C6 /* Vacancy.swift */,
+				FA6C10C42BA7172D007554C6 /* VacanciesWebRepository.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -148,6 +168,7 @@
 				FA6C10AC2BA31B86007554C6 /* Controls */,
 				FA6C10A62BA31720007554C6 /* Menubar */,
 				FA6C10AB2BA317D9007554C6 /* Login */,
+				FA6C10DA2BA76DC2007554C6 /* Vacancies */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -157,6 +178,7 @@
 			children = (
 				FA6C10A42BA31347007554C6 /* LoginView.swift */,
 				FA6C10BC2BA47BA5007554C6 /* LoginCodeView.swift */,
+				FA6C10CC2BA724E2007554C6 /* SearchView.swift */,
 			);
 			path = Pages;
 			sourceTree = "<group>";
@@ -186,6 +208,7 @@
 				FA6C10AD2BA31B99007554C6 /* RoundedButton.swift */,
 				FA6C10BA2BA473F3007554C6 /* CapsuleButton.swift */,
 				FA6C10C22BA48B09007554C6 /* VerificationCodeBox.swift */,
+				FA6C10D62BA767D1007554C6 /* SmallRoundedButton.swift */,
 			);
 			path = Controls;
 			sourceTree = "<group>";
@@ -194,8 +217,20 @@
 			isa = PBXGroup;
 			children = (
 				FA6C10B82BA3B6D0007554C6 /* StrokeText.swift */,
+				FA6C10C82BA71F7E007554C6 /* WebAPI.swift */,
+				FA6C10CE2BA72664007554C6 /* Loadable.swift */,
+				FA6C10D42BA75D62007554C6 /* NumberSticker.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		FA6C10DA2BA76DC2007554C6 /* Vacancies */ = {
+			isa = PBXGroup;
+			children = (
+				FA6C10D22BA7382E007554C6 /* VacancyBlock.swift */,
+				FA6C10DB2BA76E07007554C6 /* OfferBlock.swift */,
+			);
+			path = Vacancies;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,18 +308,27 @@
 				FA6C10A32BA1F1CD007554C6 /* Fonts.swift in Sources */,
 				FA6C10852BA1DE54007554C6 /* WorkApp.swift in Sources */,
 				FA6C10AA2BA317D3007554C6 /* EmployerLoginForm.swift in Sources */,
+				FA6C10CF2BA72664007554C6 /* Loadable.swift in Sources */,
 				FA6C10962BA1E4BE007554C6 /* Coordinator.swift in Sources */,
 				FA6C109B2BA1EC04007554C6 /* MenuBar.swift in Sources */,
 				FA6C109F2BA1ECD9007554C6 /* MenuBarButton.swift in Sources */,
 				FA6C10AE2BA31B99007554C6 /* RoundedButton.swift in Sources */,
 				FA6C10A12BA1ED4A007554C6 /* DrawingConstants.swift in Sources */,
+				FA6C10D32BA7382E007554C6 /* VacancyBlock.swift in Sources */,
+				FA6C10DC2BA76E07007554C6 /* OfferBlock.swift in Sources */,
+				FA6C10D52BA75D62007554C6 /* NumberSticker.swift in Sources */,
 				FA6C10C12BA47D52007554C6 /* WorkAppSwiftUI.swift in Sources */,
 				FA6C10B72BA38131007554C6 /* PrettyTextField.swift in Sources */,
 				FA6C10C32BA48B09007554C6 /* VerificationCodeBox.swift in Sources */,
+				FA6C10CD2BA724E2007554C6 /* SearchView.swift in Sources */,
 				FA6C10BF2BA47BF8007554C6 /* User.swift in Sources */,
 				FA6C10A52BA31347007554C6 /* LoginView.swift in Sources */,
 				FA6C10A82BA31764007554C6 /* EmployeeLoginForm.swift in Sources */,
+				FA6C10C52BA7172D007554C6 /* VacanciesWebRepository.swift in Sources */,
+				FA6C10D72BA767D1007554C6 /* SmallRoundedButton.swift in Sources */,
+				FA6C10C72BA71A3D007554C6 /* Vacancy.swift in Sources */,
 				FA6C10BD2BA47BA5007554C6 /* LoginCodeView.swift in Sources */,
+				FA6C10C92BA71F7E007554C6 /* WebAPI.swift in Sources */,
 				FA6C10992BA1E587007554C6 /* CoordinatorView.swift in Sources */,
 				FA6C10B32BA3796C007554C6 /* EmailAddress.swift in Sources */,
 			);
