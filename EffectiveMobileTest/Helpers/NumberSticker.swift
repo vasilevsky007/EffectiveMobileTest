@@ -42,5 +42,5 @@ extension View {
 }
 
 #Preview {
-    Text("Asd").numberSticker(number: 99999)
+    Text("").numberSticker(number: 99999)
 }

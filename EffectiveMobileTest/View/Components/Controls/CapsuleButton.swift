@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CapsuleButton: View {
     @Environment(\.isEnabled) private var isEnabled
-    var text: String
+    var text: LocalizedStringKey
     var action: () -> Void
     
     var body: some View {
@@ -31,5 +31,5 @@ struct CapsuleButton: View {
 }
 
 #Preview {
-    CapsuleButton(text: "djshknl", action: {}).disabled(true)
+    CapsuleButton(text: "", action: {}).disabled(true)
 }

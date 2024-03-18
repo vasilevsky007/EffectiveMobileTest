@@ -10,7 +10,7 @@ import SwiftUI
 struct LoginView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: DrawingConstants.doubleSpacing) {
-            Text(Coordinator.Page.login.name)
+            Text("Log in to your personal account")
                 .font(.title2())
                 .strokeText(width: 1, color: .black)
                 .foregroundStyle(.white)

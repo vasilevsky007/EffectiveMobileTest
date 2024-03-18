@@ -14,11 +14,7 @@ struct VacancyBlock: View {
     var body: some View {
         VStack(alignment: .leading, spacing: DrawingConstants.VacancyBlock.spacing) {
             if let lookingNumber = vacancy.lookingNumber, lookingNumber > 0 {
-                Text(
-                    (2..<5).contains(lookingNumber) ?
-                    "Сейчас просматривает \(lookingNumber) человека" :
-                    "Сейчас просматривает \(lookingNumber) человек"
-                )
+                Text("There are currently \(lookingNumber) viewers")
                     .font(.text1())
                     .foregroundStyle(.salad)
             }
@@ -60,7 +56,7 @@ struct VacancyBlock: View {
                 .font(.text1())
                 .foregroundStyle(.white)
             
-            CapsuleButton(text: "Откликнуться") {}
+            CapsuleButton(text: "Respond") {}
         }
             .overlay(alignment: .topTrailing) {
                 Button {
@@ -68,6 +64,11 @@ struct VacancyBlock: View {
                 } label: {
                     Image(vacancy.isFavorite ? .favouritesFilled : .favourites)
                         .resizable()
+                        .foregroundStyle(
+                            vacancy.isFavorite ?
+                            Color.accentColor :
+                            .placeholder
+                        )
                         .frame(
                             width: DrawingConstants.VacancyBlock.overlayImageSize,
                             height: DrawingConstants.VacancyBlock.overlayImageSize
@@ -79,14 +80,16 @@ struct VacancyBlock: View {
             .background(Color.blockBackground, in: RoundedRectangle(cornerRadius: DrawingConstants.blockCornerRadius))
     }
     
-    private var publishedText: String {
+    private var publishedText: LocalizedStringKey {
         let formatter = DateFormatter()
         formatter.dateStyle = .long
         var text = formatter.string(from: vacancy.publishedDate)
-        for i in 0..<8 {
+        var isRussian = Locale.current.language.languageCode == .russian
+        //in RU locale adding " г." after year number, in EN not, need to check other locales before adding
+        for _ in 0..<(isRussian ? 8 : 5) {
             text.removeLast()
         }
-        return  "Опубликовано " + text
+        return  "Published \(text)"
     }
 }
 

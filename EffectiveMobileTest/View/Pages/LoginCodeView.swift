@@ -19,13 +19,13 @@ struct LoginCodeView: View {
         VStack(alignment: .leading, spacing: DrawingConstants.doubleSpacing) {
             Spacer(minLength: 0)
             
-            Text("Отправили код на \(app.currentUser!.email.rawValue)")
+            Text("Sent the code to \(app.currentUser!.email.rawValue)")
                 .font(.title2())
                 .foregroundStyle(.white)
                 .lineLimit(nil)
                 .multilineTextAlignment(.leading)
             
-            Text("Напишите его, чтобы подтвердить, что это вы, а не кто-то другой входит в личный кабинет")
+            Text("Write it to confirm that it is you and not someone else logging into your personal account")
                 .font(.title3())
                 .foregroundStyle(.white)
                 .lineLimit(nil)
@@ -36,7 +36,7 @@ struct LoginCodeView: View {
                 .textContentType(.oneTimeCode)
                 .autocorrectionDisabled()
             
-            RoundedButton(text: "Подтвердить") {
+            RoundedButton(text: "Confirm") {
                 app.endUserAuthentication(with: enteredCode)
                 print(enteredCode)
                 coordinator.changeTab(to: .search)

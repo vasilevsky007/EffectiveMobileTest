@@ -13,17 +13,17 @@ struct EmployeeLoginForm: View {
     @EnvironmentObject private var app: WorkAppSwiftUI
     
     @State var email = ""
-    @State var error: String?
+    @State var error: LocalizedStringKey?
     
     var body: some View {
         VStack(alignment: .leading, spacing: DrawingConstants.doubleSpacing) {
-            Text("Поиск работы")
+            Text("Finding a job")
                 .font(.title3())
                 .strokeText(width: 1, color: .black)
                 .foregroundStyle(.white)
             
             
-            PrettyTextField(text: $email, placehoderText: "Электронная почта или телефон", placeholderImage: "responses", errorMessage: error)
+            PrettyTextField(text: $email, placehoderText: "Email or phone", placeholderImage: "responses", errorMessage: error)
                 .textContentType(.emailAddress)
                 .keyboardType(.emailAddress)
                 .textInputAutocapitalization(.never)
@@ -31,13 +31,13 @@ struct EmployeeLoginForm: View {
                 .onSubmit(submitAction)
             
             HStack {
-                RoundedButton(text: "Продолжить") {
+                RoundedButton(text: "Continue") {
                     submitAction()
                 }
                 .disabled(isEmailEmpty)
                 .animation(.easeInOut, value: isEmailEmpty)
                 
-                Button("Войти с паролем") { }
+                Button("Log in with password") { }
                 .padding(.leading, DrawingConstants.tripleSpacing)
                 .font(.buttonText2())
             }
@@ -64,7 +64,7 @@ struct EmployeeLoginForm: View {
             }
         } else {
             withAnimation {
-                error = "Вы ввели неверный e-mail"
+                error = "You've entered an incorrect e-mail"
             }
         }
     }

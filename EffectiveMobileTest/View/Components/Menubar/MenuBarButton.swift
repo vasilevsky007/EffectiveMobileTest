@@ -17,13 +17,13 @@ struct MenuBarButton: View {
             tapAction()
         } label: {
             VStack(alignment: .center) {
-                Image(tab.rawValue)
+                Image(tab.id)
                     .resizable()
                     .frame(
                         width: DrawingConstants.MenuBar.imageSize,
                         height: DrawingConstants.MenuBar.imageSize
                     )
-                Text(tab.name.localizedCapitalized)
+                Text(LocalizedStringKey(tab.id.localizedCapitalized))
                     .font(.tabText())
             }
             

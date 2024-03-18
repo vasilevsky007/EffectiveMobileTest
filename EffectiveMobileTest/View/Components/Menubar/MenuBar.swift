@@ -46,7 +46,7 @@ struct MenuBar: View {
 }
 
 #Preview {
-    let coordinator = Coordinator()
     return MenuBar()
-        .environmentObject(coordinator)
+        .environmentObject(Coordinator())
+        .environmentObject(WorkAppSwiftUI())
 }

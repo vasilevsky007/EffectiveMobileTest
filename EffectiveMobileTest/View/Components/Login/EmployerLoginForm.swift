@@ -10,18 +10,18 @@ import SwiftUI
 struct EmployerLoginForm: View {
     var body: some View {
         VStack(alignment: .leading, spacing: DrawingConstants.doubleSpacing) {
-            Text("Поиск работы")
+            Text("Employee Search")
                 .font(.title3())
                 .strokeText(width: 1, color: .black)
                 .foregroundStyle(.white)
             
-            Text("Размещение вакансий и доступ к базе резюме")
+            Text("Posting of vacancies and access to the CV database")
                 .lineLimit(nil)
                 .multilineTextAlignment(.leading)
                 .font(.text1())
                 .foregroundStyle(.white)
             
-            CapsuleButton(text: "Я ищу сотрудников") {  }
+            CapsuleButton(text: "I'm looking for employees") {  }
         }
         .padding(.horizontal, DrawingConstants.doubleSpacing)
         .padding(.vertical, DrawingConstants.tripleSpacing)

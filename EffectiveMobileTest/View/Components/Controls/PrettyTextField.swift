@@ -9,9 +9,9 @@ import SwiftUI
 
 struct PrettyTextField: View {
     @Binding var text: String
-    var placehoderText: String?
+    var placehoderText: LocalizedStringKey?
     var placeholderImage: String?
-    var errorMessage: String?
+    var errorMessage: LocalizedStringKey?
     
     var body: some View {
         VStack(alignment: .leading, spacing: DrawingConstants.standardSpacing) {
@@ -83,5 +83,5 @@ struct PrettyTextField: View {
 
 #Preview {
     @State var s = ""
-    return PrettyTextField(text: $s, placehoderText: "placeholder")
+    return PrettyTextField(text: $s)
 }

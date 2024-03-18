@@ -10,7 +10,7 @@ import SwiftUI
 struct RoundedButton: View {
     @Environment(\.isEnabled) private var isEnabled
     
-    var text: String
+    var text: LocalizedStringKey
     var action: () -> Void
     
     var body: some View {
@@ -32,6 +32,6 @@ struct RoundedButton: View {
 }
 
 #Preview {
-    RoundedButton(text: "Some text", action: {})
+    RoundedButton(text: "", action: {})
         .disabled(true)
 }

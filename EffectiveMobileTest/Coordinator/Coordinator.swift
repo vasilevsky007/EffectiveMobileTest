@@ -8,12 +8,9 @@
 import SwiftUI
 
 class Coordinator: ObservableObject {
-    enum Page: String, Identifiable {
-        case login, loginCode, search, vacancy, favourites, responses, messages, profile
-        
-        var id: String {
-            self.rawValue
-        }
+    enum Page {
+        case login, loginCode, search, favourites, responses, messages, profile
+        case vacancy(Vacancy)
     }
     
     @Published var path = NavigationPath()
@@ -55,39 +52,49 @@ class Coordinator: ObservableObject {
             LoginCodeView()
         case .search:
             SearchView()
-        case .vacancy:
-            Text(page.name)
+        case .vacancy(let vacancy):
+            VacancyDetails(vacancy: vacancy)
         case .favourites:
-            Text(page.name)
+            Text(page.id)
         case .responses:
-            Text(page.name)
+            Text(page.id)
         case .messages:
-            Text(page.name)
+            Text(page.id)
         case .profile:
-            Text(page.name)
+            Text(page.id)
         }
     }
 }
 
-extension Coordinator.Page {
-    var name: String {
+extension Coordinator.Page: Identifiable, Hashable {
+    
+    static func == (lhs: Coordinator.Page, rhs: Coordinator.Page) -> Bool {
+        lhs.id == rhs.id
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
+    
+    var id: String {
         switch self {
         case .login:
-            return "Вход в личный кабинет"
+            return "login"
         case .loginCode:
-            return ""
+            return "loginCode"
         case .search:
-            return "поиск"
-        case .vacancy:
-            return ""
+            return "search"
+        case .vacancy(let vacancy):
+            return vacancy.title
         case .favourites:
-            return "избранное"
+            return "favourites"
         case .responses:
-            return "отклики"
+            return "responses"
         case .messages:
-            return "сообщения"
+            return "messages"
         case .profile:
-            return "профиль"
+            return "profile"
         }
     }
+
 }

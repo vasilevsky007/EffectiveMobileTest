@@ -10,8 +10,8 @@ import SwiftUI
 struct OfferBlock: View {
     var imageName: String
     var imageBackground: Color = .accentDisabled
-    var title: String
-    var buttonTitle: String?
+    var title: LocalizedStringKey
+    var buttonTitle: LocalizedStringKey?
     
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
@@ -47,5 +47,5 @@ struct OfferBlock: View {
 }
 
 #Preview {
-    OfferBlock(imageName: "star", imageBackground: .saladDisabled, title: "Поднять резюме в поиске", buttonTitle: "Поднять")
+    OfferBlock(imageName: "star", imageBackground: .saladDisabled, title: "Boost your resume in the search", buttonTitle: "Boost")
 }

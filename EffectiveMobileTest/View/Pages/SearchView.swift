@@ -15,7 +15,7 @@ struct SearchView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: DrawingConstants.doubleSpacing) {
             HStack(alignment: .center, spacing: DrawingConstants.standardSpacing) {
-                PrettyTextField(text: .constant(""), placehoderText: "Должность, ключевые слова", placeholderImage: "search")
+                PrettyTextField(text: .constant(""), placehoderText: "Job title, keywords", placeholderImage: "search")
                 SmallRoundedButton(imageName: "filter") {}
             }
             
@@ -39,24 +39,24 @@ struct SearchView: View {
                             OfferBlock(
                                 imageName: "location",
                                 imageBackground: .accentDisabled,
-                                title: "Вакансии рядом с вами"
+                                title: "Vacancies near you"
                             )
                             OfferBlock(
                                 imageName: "star",
                                 imageBackground: .saladDisabled,
-                                title: "Поднять резюме в поиске",
-                                buttonTitle: "Поднять"
+                                title: "Boost your resume in the search",
+                                buttonTitle: "Boost"
                             )
                             OfferBlock(
                                 imageName: "note",
                                 imageBackground: .saladDisabled,
-                                title: "Временная работа и подработка"
+                                title: "Temporary and part-time work"
                             )
                         }
                     }.scrollIndicators(.never)
                         .padding(.top, DrawingConstants.doubleSpacing)
                     
-                    Text("Вакансии для вас")
+                    Text("Vacancies for you")
                         .font(.title2())
                         .foregroundStyle(.white)
                     
@@ -72,8 +72,7 @@ struct SearchView: View {
                             ForEach (shownVacancies) { vacancy in
                                 VacancyBlock(vacancy: vacancy)
                             }
-//                            FIXME: склонение
-                            RoundedButton(text: "Еще \(vacancies.count) вакансии") {
+                            RoundedButton(text: "Another \(vacancies.count) vacancies") {
                             }.disabled(true)
                         }
                     }
