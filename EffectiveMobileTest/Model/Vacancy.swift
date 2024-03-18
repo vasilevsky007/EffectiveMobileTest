@@ -32,6 +32,10 @@ struct Vacancy: Identifiable, Codable {
         let street: String
         let house: String
         let town: String
+    
+        var description: String {
+            "\(town), \(street), \(house)"
+        }
     }
     
     struct Experience: Codable {

@@ -10,6 +10,8 @@
 		FA156ED82BA839E200766355 /* VacancyDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA156ED72BA839E200766355 /* VacancyDetailsView.swift */; };
 		FA156EDA2BA83EC600766355 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = FA156ED92BA83EC600766355 /* Localizable.xcstrings */; };
 		FA156EDC2BA8688900766355 /* FavouritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA156EDB2BA8688900766355 /* FavouritesView.swift */; };
+		FA156EDE2BA87E2E00766355 /* AddressDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA156EDD2BA87E2E00766355 /* AddressDecoder.swift */; };
+		FA156EE12BA882C800766355 /* MapForAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA156EE02BA882C800766355 /* MapForAddress.swift */; };
 		FA6C10852BA1DE54007554C6 /* WorkApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6C10842BA1DE54007554C6 /* WorkApp.swift */; };
 		FA6C10892BA1DE56007554C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA6C10882BA1DE56007554C6 /* Assets.xcassets */; };
 		FA6C108C2BA1DE56007554C6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA6C108B2BA1DE56007554C6 /* Preview Assets.xcassets */; };
@@ -46,6 +48,8 @@
 		FA156ED72BA839E200766355 /* VacancyDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VacancyDetailsView.swift; sourceTree = "<group>"; };
 		FA156ED92BA83EC600766355 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		FA156EDB2BA8688900766355 /* FavouritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesView.swift; sourceTree = "<group>"; };
+		FA156EDD2BA87E2E00766355 /* AddressDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressDecoder.swift; sourceTree = "<group>"; };
+		FA156EE02BA882C800766355 /* MapForAddress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapForAddress.swift; sourceTree = "<group>"; };
 		FA6C10812BA1DE54007554C6 /* EffectiveMobileTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EffectiveMobileTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA6C10842BA1DE54007554C6 /* WorkApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkApp.swift; sourceTree = "<group>"; };
 		FA6C10882BA1DE56007554C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -90,6 +94,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA156EDF2BA8825000766355 /* VacancyDetails */ = {
+			isa = PBXGroup;
+			children = (
+				FA156EE02BA882C800766355 /* MapForAddress.swift */,
+			);
+			path = VacancyDetails;
+			sourceTree = "<group>";
+		};
 		FA6C10782BA1DE54007554C6 = {
 			isa = PBXGroup;
 			children = (
@@ -176,6 +188,7 @@
 				FA6C10A62BA31720007554C6 /* Menubar */,
 				FA6C10AB2BA317D9007554C6 /* Login */,
 				FA6C10DA2BA76DC2007554C6 /* Vacancies */,
+				FA156EDF2BA8825000766355 /* VacancyDetails */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -229,6 +242,7 @@
 				FA6C10C82BA71F7E007554C6 /* WebAPI.swift */,
 				FA6C10CE2BA72664007554C6 /* Loadable.swift */,
 				FA6C10D42BA75D62007554C6 /* NumberSticker.swift */,
+				FA156EDD2BA87E2E00766355 /* AddressDecoder.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -314,6 +328,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA6C10B92BA3B6D0007554C6 /* StrokeText.swift in Sources */,
+				FA156EDE2BA87E2E00766355 /* AddressDecoder.swift in Sources */,
 				FA6C10BB2BA473F3007554C6 /* CapsuleButton.swift in Sources */,
 				FA6C10A32BA1F1CD007554C6 /* Fonts.swift in Sources */,
 				FA6C10852BA1DE54007554C6 /* WorkApp.swift in Sources */,
@@ -337,6 +352,7 @@
 				FA6C10A82BA31764007554C6 /* EmployeeLoginForm.swift in Sources */,
 				FA6C10C52BA7172D007554C6 /* VacanciesWebRepository.swift in Sources */,
 				FA6C10D72BA767D1007554C6 /* SmallRoundedButton.swift in Sources */,
+				FA156EE12BA882C800766355 /* MapForAddress.swift in Sources */,
 				FA6C10C72BA71A3D007554C6 /* Vacancy.swift in Sources */,
 				FA6C10BD2BA47BA5007554C6 /* LoginCodeView.swift in Sources */,
 				FA6C10C92BA71F7E007554C6 /* WebAPI.swift in Sources */,
