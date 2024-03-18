@@ -10,7 +10,7 @@ import SwiftUI
 class Coordinator: ObservableObject {
     enum Page {
         case login, loginCode, search, favourites, responses, messages, profile
-        case vacancy(Vacancy)
+        case vacancyDetails(Vacancy)
     }
     
     @Published var path = NavigationPath()
@@ -52,10 +52,10 @@ class Coordinator: ObservableObject {
             LoginCodeView()
         case .search:
             SearchView()
-        case .vacancy(let vacancy):
+        case .vacancyDetails(let vacancy):
             VacancyDetailsView(vacancy: vacancy)
         case .favourites:
-            Text(page.id).foregroundStyle(.white).frame(maxWidth: .infinity, maxHeight: .infinity)
+            FavouritesView()
         case .responses:
             Text(page.id).foregroundStyle(.white).frame(maxWidth: .infinity, maxHeight: .infinity)
         case .messages:
@@ -84,8 +84,8 @@ extension Coordinator.Page: Identifiable, Hashable {
             return "loginCode"
         case .search:
             return "search"
-        case .vacancy(let vacancy):
-            return vacancy.title
+        case .vacancyDetails(let vacancy):
+            return vacancy.id
         case .favourites:
             return "favourites"
         case .responses:

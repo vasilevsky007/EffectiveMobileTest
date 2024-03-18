@@ -72,8 +72,7 @@ struct SearchView: View {
                             ForEach (shownVacancies) { vacancy in
                                 VacancyBlock(vacancy: vacancy)
                             }
-                            RoundedButton(text: "Another \(vacancies.count) vacancies") {
-                            }.disabled(true)
+                            RoundedButton(text: "Another \(vacancies.count) vacancies") { }
                         }
                     }
                     

@@ -29,6 +29,17 @@ import SwiftUI
         return number
     }
     
+    var favouriteVacancies: [Vacancy] {
+        guard let vacancies = vacancies.value else { return [] }
+        var favourite: [Vacancy] = []
+        for vacancy in vacancies {
+            if vacancy.isFavorite {
+                favourite.append(vacancy)
+            }
+        }
+        return favourite
+    }
+    
     func startUserAuthentication(with email: EmailAddress) {
         currentUser = User(email: email)
     }
