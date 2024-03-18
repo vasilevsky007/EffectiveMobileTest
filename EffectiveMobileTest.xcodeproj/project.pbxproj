@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FA156ED82BA839E200766355 /* VacancyDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA156ED72BA839E200766355 /* VacancyDetails.swift */; };
+		FA156ED82BA839E200766355 /* VacancyDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA156ED72BA839E200766355 /* VacancyDetailsView.swift */; };
 		FA156EDA2BA83EC600766355 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = FA156ED92BA83EC600766355 /* Localizable.xcstrings */; };
 		FA6C10852BA1DE54007554C6 /* WorkApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6C10842BA1DE54007554C6 /* WorkApp.swift */; };
 		FA6C10892BA1DE56007554C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA6C10882BA1DE56007554C6 /* Assets.xcassets */; };
@@ -42,7 +42,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		FA156ED72BA839E200766355 /* VacancyDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VacancyDetails.swift; sourceTree = "<group>"; };
+		FA156ED72BA839E200766355 /* VacancyDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VacancyDetailsView.swift; sourceTree = "<group>"; };
 		FA156ED92BA83EC600766355 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		FA6C10812BA1DE54007554C6 /* EffectiveMobileTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EffectiveMobileTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA6C10842BA1DE54007554C6 /* WorkApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkApp.swift; sourceTree = "<group>"; };
@@ -184,7 +184,7 @@
 				FA6C10A42BA31347007554C6 /* LoginView.swift */,
 				FA6C10BC2BA47BA5007554C6 /* LoginCodeView.swift */,
 				FA6C10CC2BA724E2007554C6 /* SearchView.swift */,
-				FA156ED72BA839E200766355 /* VacancyDetails.swift */,
+				FA156ED72BA839E200766355 /* VacancyDetailsView.swift */,
 			);
 			path = Pages;
 			sourceTree = "<group>";
@@ -329,7 +329,7 @@
 				FA6C10C32BA48B09007554C6 /* VerificationCodeBox.swift in Sources */,
 				FA6C10CD2BA724E2007554C6 /* SearchView.swift in Sources */,
 				FA6C10BF2BA47BF8007554C6 /* User.swift in Sources */,
-				FA156ED82BA839E200766355 /* VacancyDetails.swift in Sources */,
+				FA156ED82BA839E200766355 /* VacancyDetailsView.swift in Sources */,
 				FA6C10A52BA31347007554C6 /* LoginView.swift in Sources */,
 				FA6C10A82BA31764007554C6 /* EmployeeLoginForm.swift in Sources */,
 				FA6C10C52BA7172D007554C6 /* VacanciesWebRepository.swift in Sources */,

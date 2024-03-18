@@ -13,23 +13,26 @@ struct CapsuleButton: View {
     var action: () -> Void
     
     var body: some View {
-        Button(text) {
+        Button {
             action()
+        } label: {
+            HStack {
+                Spacer(minLength: 0)
+                Text(text)
+                    .foregroundStyle(.white)
+                Spacer(minLength: 0)
+            }
         }
-        .foregroundStyle(.white)
-        .buttonStyle(.plain)
         .frame(height: DrawingConstants.PillowButton.height)
-        .frame(maxWidth: .infinity)
         .background(
             isEnabled ?
             Color.salad :
                 Color.saladDisabled,
             in: .capsule
         )
-        .foregroundColor(.primary)
     }
 }
 
 #Preview {
-    CapsuleButton(text: "", action: {}).disabled(true)
+    CapsuleButton(text: "", action: { print("hello") })//.disabled(true)
 }

@@ -9,6 +9,8 @@ import SwiftUI
 
 struct VacancyBlock: View {
     @EnvironmentObject private var app: WorkAppSwiftUI
+    @EnvironmentObject private var coordinator: Coordinator
+    
     var vacancy: Vacancy
     
     var body: some View {
@@ -78,13 +80,16 @@ struct VacancyBlock: View {
             }
             .padding(DrawingConstants.doubleSpacing)
             .background(Color.blockBackground, in: RoundedRectangle(cornerRadius: DrawingConstants.blockCornerRadius))
+            .onTapGesture {
+                coordinator.push(.vacancy(vacancy))
+            }
     }
     
     private var publishedText: LocalizedStringKey {
         let formatter = DateFormatter()
         formatter.dateStyle = .long
         var text = formatter.string(from: vacancy.publishedDate)
-        var isRussian = Locale.current.language.languageCode == .russian
+        let isRussian = Locale.current.language.languageCode == .russian
         //in RU locale adding " г." after year number, in EN not, need to check other locales before adding
         for _ in 0..<(isRussian ? 8 : 5) {
             text.removeLast()

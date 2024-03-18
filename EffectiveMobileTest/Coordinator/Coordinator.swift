@@ -53,15 +53,15 @@ class Coordinator: ObservableObject {
         case .search:
             SearchView()
         case .vacancy(let vacancy):
-            VacancyDetails(vacancy: vacancy)
+            VacancyDetailsView(vacancy: vacancy)
         case .favourites:
-            Text(page.id)
+            Text(page.id).foregroundStyle(.white).frame(maxWidth: .infinity, maxHeight: .infinity)
         case .responses:
-            Text(page.id)
+            Text(page.id).foregroundStyle(.white).frame(maxWidth: .infinity, maxHeight: .infinity)
         case .messages:
-            Text(page.id)
+            Text(page.id).foregroundStyle(.white).frame(maxWidth: .infinity, maxHeight: .infinity)
         case .profile:
-            Text(page.id)
+            Text(page.id).foregroundStyle(.white).frame(maxWidth: .infinity, maxHeight: .infinity)
         }
     }
 }

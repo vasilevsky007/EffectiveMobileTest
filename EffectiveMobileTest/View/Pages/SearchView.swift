@@ -80,12 +80,15 @@ struct SearchView: View {
                     
                 }
             }
+                .scrollDismissesKeyboard(.immediately)
                 .scrollIndicators(.never)
                 .refreshable {
                     app.loadVacancies()
                 }
                 .task {
-                    app.loadVacancies()
+                    if app.vacancies.value == nil {
+                        app.loadVacancies()
+                    }
                 }
         }
     }

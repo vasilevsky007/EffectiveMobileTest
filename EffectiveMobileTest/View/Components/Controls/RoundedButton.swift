@@ -14,24 +14,27 @@ struct RoundedButton: View {
     var action: () -> Void
     
     var body: some View {
-        Button(text) {
+        Button {
             action()
+        } label: {
+            HStack {
+                Spacer(minLength: 0)
+                Text(text)
+                    .foregroundStyle(.white)
+                Spacer(minLength: 0)
+            }
         }
-            .foregroundStyle(.white)
-            .buttonStyle(.plain)
-            .frame(height: DrawingConstants.lineElementHeight)
-            .frame(maxWidth: .infinity)
-            .background(
-                isEnabled ?
-                    Color.accentColor :
-                    Color.accentDisabled,
-                in: RoundedRectangle(cornerRadius: DrawingConstants.cornerRadius)
-            )
-            .foregroundColor(.primary)
+        .frame(height: DrawingConstants.lineElementHeight)
+        .background(
+            isEnabled ?
+            Color.accentColor :
+                Color.accentDisabled,
+            in: RoundedRectangle(cornerRadius: DrawingConstants.cornerRadius)
+        )
     }
 }
 
 #Preview {
-    RoundedButton(text: "", action: {})
-        .disabled(true)
+    RoundedButton(text: "", action: { print("hello") })
+//        .disabled(true)
 }

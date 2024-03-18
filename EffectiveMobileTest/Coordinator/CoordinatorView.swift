@@ -26,6 +26,7 @@ struct CoordinatorView: View {
                 
             Divider()
                 .padding(.bottom,DrawingConstants.standardSpacing)
+            
             MenuBar()
                 .ignoresSafeArea(.keyboard)
         }
