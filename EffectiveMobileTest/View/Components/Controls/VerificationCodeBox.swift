@@ -36,7 +36,7 @@ struct VerificationCodeBox: View {
                 TextField(
                     "",
                     text: $enteredCharacters[position],
-                    prompt: Text("✻").foregroundColor(.placeholder)
+                    prompt: Text("✻").foregroundStyle(.secondaryContent)
                 )
                     .focused($focusedIndex, equals: position)
                     .font(.code())
@@ -61,6 +61,8 @@ struct VerificationCodeBox: View {
                 newStrings.append(contentsOf: Array.init(repeating: "", count: numberOfCharacters - newStrings.count))
                 enteredCharacters = newStrings
             }
+        }.onAppear {
+            focusedIndex = 0
         }
     }
 }

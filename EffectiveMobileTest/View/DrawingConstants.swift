@@ -30,9 +30,6 @@ struct DrawingConstants {
         static let imageSize: CGFloat = 24
         static let closeImageSize: CGFloat = 14
         static let closeImagePadding: CGFloat = 5
-        static let shadowRadius: CGFloat = 4
-        static let shadowOffsetX: CGFloat = 0
-        static let shadowOffsetY: CGFloat = 4
     }
     
     struct PillowButton {
@@ -45,8 +42,11 @@ struct DrawingConstants {
     
     struct VacancyBlock {
         static let spacing: CGFloat = 10
-        static let overlayImageSize: CGFloat = 24
         static let textImageSize: CGFloat = 16
+    }
+    
+    struct SwitchButton {
+        static let imageSize: CGFloat = 24
     }
     
     struct OfferBlock {

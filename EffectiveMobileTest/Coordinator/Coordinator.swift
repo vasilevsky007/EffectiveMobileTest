@@ -13,11 +13,15 @@ class Coordinator: ObservableObject {
         case vacancyDetails(Vacancy)
     }
     
+    let tabs: [Page] = [.search, .favourites, .responses, .messages, .profile]
+    
     @Published var path = NavigationPath()
 //    @Published var sheet: Sheet?
 //    @Published var fullScreenCover: FullScreenCover?
     
     @Published var root = Page.login
+    
+    @Published var pushDirection = Edge.trailing
     
     func push(_ page: Page) {
         withAnimation{
@@ -38,9 +42,16 @@ class Coordinator: ObservableObject {
     }
     
     func changeTab(to page: Page) {
-        withAnimation {
-            path.removeLast(path.count)
-            root = page
+        if (root != page) {
+            if (tabs.firstIndex(of: root) ?? Int.max < tabs.firstIndex(of: page) ?? Int.max) {
+                pushDirection = .trailing
+            } else {
+                pushDirection = .leading
+            }
+            withAnimation {
+                path.removeLast(path.count)
+                root = page
+            }
         }
     }
     

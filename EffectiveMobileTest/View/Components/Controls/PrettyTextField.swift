@@ -42,7 +42,7 @@ struct PrettyTextField: View {
                                 width: DrawingConstants.PrettyTextField.closeImageSize,
                                 height: DrawingConstants.PrettyTextField.closeImageSize
                             )
-                            .foregroundStyle(.white)
+                            .foregroundStyle(.grey5)
                             .padding(DrawingConstants.PrettyTextField.closeImagePadding)
                             .padding(.leading, DrawingConstants.standardSpacing)
                     }
@@ -54,13 +54,6 @@ struct PrettyTextField: View {
                 .animation(.easeInOut, value: isEmpty)
                 .clipShape(.rect(cornerRadius: DrawingConstants.cornerRadius))
                 .overlay(noError ? .clear : .red, in: .rect(cornerRadius: DrawingConstants.cornerRadius).stroke(lineWidth: 1))
-            
-//                .shadow(
-//                    color: .black,
-//                    radius: DrawingConstants.PrettyTextField.shadowRadius,
-//                    x: DrawingConstants.PrettyTextField.shadowOffsetX,
-//                    y: DrawingConstants.PrettyTextField.shadowOffsetY
-//                )
             if !noError {
                 Text(errorMessage!)
                     .font(.footnote)

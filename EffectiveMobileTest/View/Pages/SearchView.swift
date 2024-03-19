@@ -54,11 +54,12 @@ struct SearchView: View {
                             )
                         }
                     }.scrollIndicators(.never)
-                        .padding(.top, DrawingConstants.doubleSpacing)
+                       
                     
                     Text("Vacancies for you")
                         .font(.title2())
                         .foregroundStyle(.white)
+                        .padding(.top, DrawingConstants.doubleSpacing)
                     
                     if let error = app.vacancies.error {
                         Text(error.localizedDescription)
@@ -73,11 +74,12 @@ struct SearchView: View {
                                 VacancyBlock(vacancy: vacancy)
                             }
                             RoundedButton(text: "Another \(vacancies.count) vacancies") { }
+                                .padding(.top, DrawingConstants.standardSpacing)
                         }
                     }
                     
                     
-                }
+                }.padding(.bottom, DrawingConstants.standardSpacing)
             }
                 .scrollDismissesKeyboard(.immediately)
                 .scrollIndicators(.never)
@@ -90,6 +92,7 @@ struct SearchView: View {
                     }
                 }
         }
+        .padding(.top, DrawingConstants.standardSpacing)
     }
 }
 

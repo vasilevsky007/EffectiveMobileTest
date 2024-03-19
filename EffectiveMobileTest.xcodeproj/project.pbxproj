@@ -13,8 +13,9 @@
 		FA156EDE2BA87E2E00766355 /* AddressDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA156EDD2BA87E2E00766355 /* AddressDecoder.swift */; };
 		FA156EE12BA882C800766355 /* MapForAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA156EE02BA882C800766355 /* MapForAddress.swift */; };
 		FA156EE42BA9950100766355 /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA156EE32BA9950100766355 /* NavigationBar.swift */; };
-		FA156EE62BA9A50600766355 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA156EE52BA9A50600766355 /* String.swift */; };
+		FA156EE62BA9A50600766355 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA156EE52BA9A50600766355 /* StringExtensions.swift */; };
 		FA156EE82BA9A8C200766355 /* LiveInfoBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA156EE72BA9A8C200766355 /* LiveInfoBlock.swift */; };
+		FA156EEA2BA9F75500766355 /* SwitchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA156EE92BA9F75500766355 /* SwitchButton.swift */; };
 		FA6C10852BA1DE54007554C6 /* WorkApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6C10842BA1DE54007554C6 /* WorkApp.swift */; };
 		FA6C10892BA1DE56007554C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA6C10882BA1DE56007554C6 /* Assets.xcassets */; };
 		FA6C108C2BA1DE56007554C6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA6C108B2BA1DE56007554C6 /* Preview Assets.xcassets */; };
@@ -30,7 +31,6 @@
 		FA6C10AE2BA31B99007554C6 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6C10AD2BA31B99007554C6 /* RoundedButton.swift */; };
 		FA6C10B32BA3796C007554C6 /* EmailAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6C10B22BA3796C007554C6 /* EmailAddress.swift */; };
 		FA6C10B72BA38131007554C6 /* PrettyTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6C10B62BA38131007554C6 /* PrettyTextField.swift */; };
-		FA6C10B92BA3B6D0007554C6 /* StrokeText.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6C10B82BA3B6D0007554C6 /* StrokeText.swift */; };
 		FA6C10BB2BA473F3007554C6 /* CapsuleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6C10BA2BA473F3007554C6 /* CapsuleButton.swift */; };
 		FA6C10BD2BA47BA5007554C6 /* LoginCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6C10BC2BA47BA5007554C6 /* LoginCodeView.swift */; };
 		FA6C10BF2BA47BF8007554C6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6C10BE2BA47BF8007554C6 /* User.swift */; };
@@ -54,8 +54,9 @@
 		FA156EDD2BA87E2E00766355 /* AddressDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressDecoder.swift; sourceTree = "<group>"; };
 		FA156EE02BA882C800766355 /* MapForAddress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapForAddress.swift; sourceTree = "<group>"; };
 		FA156EE32BA9950100766355 /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
-		FA156EE52BA9A50600766355 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		FA156EE52BA9A50600766355 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		FA156EE72BA9A8C200766355 /* LiveInfoBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveInfoBlock.swift; sourceTree = "<group>"; };
+		FA156EE92BA9F75500766355 /* SwitchButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchButton.swift; sourceTree = "<group>"; };
 		FA6C10812BA1DE54007554C6 /* EffectiveMobileTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EffectiveMobileTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA6C10842BA1DE54007554C6 /* WorkApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkApp.swift; sourceTree = "<group>"; };
 		FA6C10882BA1DE56007554C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -72,7 +73,6 @@
 		FA6C10AD2BA31B99007554C6 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		FA6C10B22BA3796C007554C6 /* EmailAddress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailAddress.swift; sourceTree = "<group>"; };
 		FA6C10B62BA38131007554C6 /* PrettyTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrettyTextField.swift; sourceTree = "<group>"; };
-		FA6C10B82BA3B6D0007554C6 /* StrokeText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrokeText.swift; sourceTree = "<group>"; };
 		FA6C10BA2BA473F3007554C6 /* CapsuleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapsuleButton.swift; sourceTree = "<group>"; };
 		FA6C10BC2BA47BA5007554C6 /* LoginCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCodeView.swift; sourceTree = "<group>"; };
 		FA6C10BE2BA47BF8007554C6 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -247,6 +247,7 @@
 				FA6C10BA2BA473F3007554C6 /* CapsuleButton.swift */,
 				FA6C10C22BA48B09007554C6 /* VerificationCodeBox.swift */,
 				FA6C10D62BA767D1007554C6 /* SmallRoundedButton.swift */,
+				FA156EE92BA9F75500766355 /* SwitchButton.swift */,
 			);
 			path = Controls;
 			sourceTree = "<group>";
@@ -254,12 +255,11 @@
 		FA6C10B12BA3760D007554C6 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				FA6C10B82BA3B6D0007554C6 /* StrokeText.swift */,
 				FA6C10C82BA71F7E007554C6 /* WebAPI.swift */,
 				FA6C10CE2BA72664007554C6 /* Loadable.swift */,
 				FA6C10D42BA75D62007554C6 /* NumberSticker.swift */,
 				FA156EDD2BA87E2E00766355 /* AddressDecoder.swift */,
-				FA156EE52BA9A50600766355 /* String.swift */,
+				FA156EE52BA9A50600766355 /* StringExtensions.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -344,7 +344,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA6C10B92BA3B6D0007554C6 /* StrokeText.swift in Sources */,
 				FA156EDE2BA87E2E00766355 /* AddressDecoder.swift in Sources */,
 				FA6C10BB2BA473F3007554C6 /* CapsuleButton.swift in Sources */,
 				FA6C10A32BA1F1CD007554C6 /* Fonts.swift in Sources */,
@@ -359,8 +358,9 @@
 				FA6C10AE2BA31B99007554C6 /* RoundedButton.swift in Sources */,
 				FA6C10A12BA1ED4A007554C6 /* DrawingConstants.swift in Sources */,
 				FA6C10D32BA7382E007554C6 /* VacancyBlock.swift in Sources */,
-				FA156EE62BA9A50600766355 /* String.swift in Sources */,
+				FA156EE62BA9A50600766355 /* StringExtensions.swift in Sources */,
 				FA6C10DC2BA76E07007554C6 /* OfferBlock.swift in Sources */,
+				FA156EEA2BA9F75500766355 /* SwitchButton.swift in Sources */,
 				FA6C10D52BA75D62007554C6 /* NumberSticker.swift in Sources */,
 				FA6C10C12BA47D52007554C6 /* WorkAppSwiftUI.swift in Sources */,
 				FA6C10B72BA38131007554C6 /* PrettyTextField.swift in Sources */,

@@ -12,7 +12,6 @@ struct EmployerLoginForm: View {
         VStack(alignment: .leading, spacing: DrawingConstants.doubleSpacing) {
             Text("Employee Search")
                 .font(.title3())
-                .strokeText(width: 1, color: .black)
                 .foregroundStyle(.white)
             
             Text("Posting of vacancies and access to the CV database")

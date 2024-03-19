@@ -14,9 +14,7 @@ struct LoginView: View {
                 VStack(alignment: .leading, spacing: DrawingConstants.doubleSpacing) {
                     Text("Log in to your personal account")
                         .font(.title2())
-                        .strokeText(width: 1, color: .black)
                         .foregroundStyle(.white)
-                    //                .containerRelativeFrame(.horizontal, alignment: .leading)
                     Spacer(minLength: 0)
                     EmployeeLoginForm()
                     EmployerLoginForm()

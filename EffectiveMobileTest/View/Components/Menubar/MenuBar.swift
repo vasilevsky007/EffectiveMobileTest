@@ -11,10 +11,8 @@ struct MenuBar: View {
     @EnvironmentObject private var coordinator: Coordinator
     @EnvironmentObject private var app: WorkAppSwiftUI
     
-    var tabs: [Coordinator.Page] = [.search, .favourites, .responses, .messages, .profile]
-    
     var activeTab: Coordinator.Page? {
-        return tabs.contains(coordinator.root) ? coordinator.root : nil
+        return coordinator.tabs.contains(coordinator.root) ? coordinator.root : nil
     }
     
     var body: some View {
@@ -25,12 +23,12 @@ struct MenuBar: View {
                     spacing: nil,
                     alignment: .center
                 ),
-                count: tabs.count
+                count: coordinator.tabs.count
             ),
             alignment: .center,
             spacing: 0
         ) {
-            ForEach(tabs) { tab in
+            ForEach(coordinator.tabs) { tab in
                 MenuBarButton(
                     tab: tab,
                     isActiveTab: activeTab == tab

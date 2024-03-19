@@ -62,15 +62,8 @@ struct VacancyDetailsView: View {
                     height: DrawingConstants.NavigationBar.backButtonHeight
                 )
         }
-        Button {
+        SwitchButton(state: isFavourite, imageTrue: .favouritesFilled, imageFalse: .favourites) {
             app.toggleFavourites(on: vacancy)
-        } label: {
-            Image(isFavourite ? .favouritesFilled : .favourites)
-                .resizable()
-                .frame(
-                    width: DrawingConstants.NavigationBar.backButtonHeight,
-                    height: DrawingConstants.NavigationBar.backButtonHeight
-                )
         }
     }
     

@@ -56,27 +56,19 @@ struct VacancyBlock: View {
             
             Text(publishedText)
                 .font(.text1())
-                .foregroundStyle(.white)
+                .foregroundStyle(.secondaryContent)
             
             CapsuleButton(text: "Respond") {}
         }
             .overlay(alignment: .topTrailing) {
-                Button {
+                SwitchButton(
+                    state: vacancy.isFavorite,
+                    imageTrue: .favouritesFilled,
+                    imageFalse: .favourites
+                ) {
                     app.toggleFavourites(on: vacancy)
-                } label: {
-                    Image(vacancy.isFavorite ? .favouritesFilled : .favourites)
-                        .resizable()
-                        .foregroundStyle(
-                            vacancy.isFavorite ?
-                            Color.accentColor :
-                            .placeholder
-                        )
-                        .frame(
-                            width: DrawingConstants.VacancyBlock.overlayImageSize,
-                            height: DrawingConstants.VacancyBlock.overlayImageSize
-                        )
                 }
-                .buttonStyle(.plain)
+                .foregroundStyle(Color.placeholder)
             }
             .padding(DrawingConstants.doubleSpacing)
             .background(Color.blockBackground, in: RoundedRectangle(cornerRadius: DrawingConstants.blockCornerRadius))
@@ -105,7 +97,7 @@ struct VacancyBlock: View {
                 schedules: [],
                 description: "asf",
                 lookingNumber: 12,
-                isFavorite: false,
+                isFavorite: true,
                 appliedNumber: 10,
                 salary: .init(full: "", short: "1200BYN"),
                 company: "dskl",
