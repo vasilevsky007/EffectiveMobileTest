@@ -44,7 +44,6 @@ struct LoginCodeView: View {
                         coordinator.changeTab(to: .search)
                     }
                     .disabled(enteredCode.count<numberOfCharacters)
-                    Text(enteredCode)
                     Spacer(minLength: 0)
                 }.frame(minHeight: geometry.size.height)
             }

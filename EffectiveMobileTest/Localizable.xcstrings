@@ -11,6 +11,110 @@
         }
       }
     },
+    "%lld people are currently viewing this vacancy" : {
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld person is currently viewing this vacancy"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "new",
+                  "value" : "%lld people are currently viewing this vacancy"
+                }
+              }
+            }
+          }
+        },
+        "ru" : {
+          "variations" : {
+            "plural" : {
+              "few" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld человека сейчас смотрят эту вакансию"
+                }
+              },
+              "many" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld человек сейчас смотрят эту вакансию"
+                }
+              },
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld человек сейчас смотрит эту вакансию"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld человек сейчас смотрят эту вакансию"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%lld people have already responded" : {
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld person have already responded"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "new",
+                  "value" : "%lld people have already responded"
+                }
+              }
+            }
+          }
+        },
+        "ru" : {
+          "variations" : {
+            "plural" : {
+              "few" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld человека уже откликнулось"
+                }
+              },
+              "many" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld человек уже откликнулось"
+                }
+              },
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld человек уже откликнулся"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld человек уже откликнулось"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "%lld vacancies" : {
       "localizations" : {
         "en" : {
@@ -125,6 +229,16 @@
         }
       }
     },
+    "Ask a question to the employer" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Задайте вопрос работодателю"
+          }
+        }
+      }
+    },
     "Boost" : {
       "localizations" : {
         "ru" : {
@@ -202,6 +316,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Поиск работы"
+          }
+        }
+      }
+    },
+    "He or she will receive it with the response to the vacancy" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Он получит его с откликом на вакансию"
           }
         }
       }
@@ -284,6 +408,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Опубликовано %@"
+          }
+        }
+      }
+    },
+    "Relevant experience: %@" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Требуемый опыт: %@"
           }
         }
       }
@@ -428,6 +562,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Вы ввели неверный e-mail"
+          }
+        }
+      }
+    },
+    "Your responsibilities" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ваши задачи"
           }
         }
       }

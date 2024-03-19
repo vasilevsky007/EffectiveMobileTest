@@ -21,6 +21,11 @@ struct DrawingConstants {
         static let imageSize: CGFloat = 24
     }
     
+    struct NavigationBar {
+        static let buttonsHeight: CGFloat = 28
+        static let backButtonHeight: CGFloat = tripleSpacing
+    }
+    
     struct PrettyTextField {
         static let imageSize: CGFloat = 24
         static let closeImageSize: CGFloat = 14
@@ -54,5 +59,15 @@ struct DrawingConstants {
     struct SmallRoundedButton {
         static let size: CGFloat = 40
         static let imageSize: CGFloat = 24
+    }
+    
+    struct LiveInfoBlock {
+        static let height: CGFloat = 50
+    }
+    
+    struct VacancyDetailsView {
+        static let mapHeight: CGFloat = 58
+        static let mapBlockVerticalPadding = standardSpacing * 1.5
+        static let questionHorizontalPadding = standardSpacing * 1.5
     }
 }

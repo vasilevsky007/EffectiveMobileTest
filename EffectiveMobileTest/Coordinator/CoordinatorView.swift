@@ -21,7 +21,9 @@ struct CoordinatorView: View {
                         coordinator.view(for: page)
                             .padding(.horizontal, DrawingConstants.doubleSpacing)
                             .background(.pageBackground)
+                            .toolbar(.hidden, for: .navigationBar)
                     }
+                    .toolbar(.hidden, for: .navigationBar)
             }
                 
             Divider()
