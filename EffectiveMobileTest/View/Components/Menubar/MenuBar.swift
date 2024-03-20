@@ -7,11 +7,19 @@
 
 import SwiftUI
 
+/// A menu bar view.
+///
+/// `MenuBar` displays a horizontal bar of buttons representing different tabs or sections of an application. Each button corresponds to a specific tab and can be tapped to navigate to that tab.
+///
+/// Use ``init()`` to add a menu bar for your view.
 struct MenuBar: View {
     @EnvironmentObject private var coordinator: Coordinator
     @EnvironmentObject private var app: WorkAppSwiftUI
     
-    var activeTab: Coordinator.Page? {
+    /// Initializes a new instance of ``MenuBar``.
+    init() {}
+    
+    private var activeTab: Coordinator.Page? {
         return coordinator.tabs.contains(coordinator.root) ? coordinator.root : nil
     }
     

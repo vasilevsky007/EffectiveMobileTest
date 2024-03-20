@@ -7,6 +7,11 @@
 
 import SwiftUI
 
+/// The main view of the app, using coordinator to manage navigation.
+///
+/// `CoordinatorView` manages the navigation stack and provides a centralized point for coordinating navigation within the app.
+///
+/// Use this view as the root view of your SwiftUI app to handle navigation and display different screens based on the current navigation state.
 struct CoordinatorView: View {
     @StateObject var coordinator = Coordinator()
     @StateObject var app = WorkAppSwiftUI()

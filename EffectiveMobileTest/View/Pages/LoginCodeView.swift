@@ -7,6 +7,11 @@
 
 import SwiftUI
 
+/// A view for entering the login code.
+///
+/// `LoginCodeView` displays a screen for users to enter the login code sent to their email or phone number.
+///
+/// Use this view to confirm the user's identity during the login process.
 struct LoginCodeView: View {
     @EnvironmentObject private var coordinator: Coordinator
     @EnvironmentObject private var app: WorkAppSwiftUI

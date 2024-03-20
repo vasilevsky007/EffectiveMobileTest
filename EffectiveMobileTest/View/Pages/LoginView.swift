@@ -7,6 +7,11 @@
 
 import SwiftUI
 
+/// A view for the login screen.
+///
+/// `LoginView` displays a screen for users to log in to their accounts.
+///
+/// Use this view to present a login interface for both employees and employers.
 struct LoginView: View {
     var body: some View {
         GeometryReader { geometry in

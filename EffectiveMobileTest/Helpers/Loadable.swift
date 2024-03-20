@@ -7,12 +7,16 @@
 
 import Foundation
 
+/// An enum representing the loading state of a resource.
 enum Loadable<T> {
-    
+    /// The resource is not loaded, with an optional error.
     case notLoaded(error: Error?)
+    /// The resource is currently loading, with an optional last known value.
     case loading(last: T?)
+    /// The resource is loaded with a value.
     case loaded(T)
     
+    /// The value of the loaded resource, if available.
     var value: T? {
         switch self {
         case let .loaded(value): return value
@@ -20,13 +24,14 @@ enum Loadable<T> {
         default: return nil
         }
     }
+    /// The error associated with the resource, if available.
     var error: Error? {
         switch self {
         case let .notLoaded(error): return error
         default: return nil
         }
     }
-    
+    /// Indicates whether the resource is currently loading.
     var isLoading: Bool {
         switch self {
         case .loading(_):

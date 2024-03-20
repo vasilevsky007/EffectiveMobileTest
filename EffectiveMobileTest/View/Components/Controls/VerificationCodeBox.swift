@@ -7,15 +7,27 @@
 
 import SwiftUI
 
+/// A view for entering verification codes.
+///
+/// `VerificationCodeBox` provides a text input interface for users to enter verification codes. It consists of a row of text fields, each representing a single character of the code. 
+/// As the user types, the entered characters are validated according to the provided filter rule and displayed in the corresponding text fields.
+/// The box automatically moves focus to the next text field as characters are entered, providing a seamless input experience.
+///
+/// Use ``init(code:numberOfCharacters:charactersFilter:)`` to create a box for entering verification codes with customizable appearance and behavior.
 struct VerificationCodeBox: View {
-    @Binding var code: String
-    let numberOfCharacters: Int
-    let filterRule: (Character) -> Bool
+    @Binding private var code: String
+    private let numberOfCharacters: Int
+    private let filterRule: (Character) -> Bool
     
     @State private var enteredCharacters: [String]
     @FocusState private var focusedIndex: Int?
     
-    var enteredCode: String {
+    /// Initializes a new instance of ``VerificationCodeBox``.
+    /// - Parameters:
+    ///   - code: The binding for the entered verification code.
+    ///   - numberOfCharacters: The number of characters in the verification code.
+    ///   - charactersFilter: A closure specifying the filtering rule for entered characters.
+    private var enteredCode: String {
         var result = ""
         for enteredCharacter in enteredCharacters {
             result += enteredCharacter

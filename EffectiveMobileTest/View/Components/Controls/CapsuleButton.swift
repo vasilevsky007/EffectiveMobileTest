@@ -7,10 +7,22 @@
 
 import SwiftUI
 
+/// A customizable capsule button view.
+///
+/// Use ``init(text:action:)`` to create a capsule-shaped button with customizable appearance.
 struct CapsuleButton: View {
     @Environment(\.isEnabled) private var isEnabled
-    var text: LocalizedStringKey
-    var action: () -> Void
+    private let text: LocalizedStringKey
+    private let action: () -> Void
+    
+    /// Initializes a new instance of ``CapsuleButton``.
+    /// - Parameters:
+    ///   - text: The localized text displayed on the button.
+    ///   - action: The closure to execute when the button is tapped.
+    init(text: LocalizedStringKey, action: @escaping () -> Void) {
+        self.text = text
+        self.action = action
+    }
     
     var body: some View {
         Button {

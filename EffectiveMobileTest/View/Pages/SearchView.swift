@@ -7,6 +7,11 @@
 
 import SwiftUI
 
+/// A view for searching and browsing job vacancies.
+///
+/// `SearchView` displays a screen where users can search for job vacancies, apply filters, and view relevant offers.
+///
+/// Use this view to provide users with a convenient interface for exploring available job opportunities.
 struct SearchView: View {
     @EnvironmentObject private var app: WorkAppSwiftUI
     

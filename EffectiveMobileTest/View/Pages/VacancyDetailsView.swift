@@ -7,10 +7,15 @@
 
 import SwiftUI
 
+/// A view for displaying detailed information about a job vacancy.
+///
+/// `VacancyDetailsView` presents various details about a specific job vacancy, including its title, company information, salary, experience requirements, responsibilities, location, and communication options.
+///
+/// Use this view to provide users with comprehensive information about job vacancies and enable them to interact with employers.
 struct VacancyDetailsView: View {
     @EnvironmentObject private var app: WorkAppSwiftUI
     
-    var vacancy: Vacancy
+    let vacancy: Vacancy
     
     //вообще по-хорошему бы передавать только айдишник,
     //и тогда все данные на экране будут инвалидироваться при изменении модели,
@@ -176,7 +181,7 @@ struct VacancyDetailsView: View {
             }
         }
         
-        RoundedButton(text: "Ask a question to the employer", height: 48, color: .salad) { }
+        RoundedButton(text: "Respond", height: 48, color: .salad) { }
             .font(.buttonText1())
         
             .padding(.bottom, DrawingConstants.standardSpacing)

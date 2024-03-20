@@ -7,9 +7,23 @@
 
 import SwiftUI
 
+/// A block displaying live information.
+///
+/// `LiveInfoBlock` presents live information about vacancy with text and an associated image.
+///
+/// Use ``init(text:image:)`` to create a block for displaying live information.
 struct LiveInfoBlock: View {
-    var text: LocalizedStringKey
-    var image: ImageResource
+    private let text: LocalizedStringKey
+    private let image: ImageResource
+    
+    /// Initializes a new instance of ``LiveInfoBlock``.
+    /// - Parameters:
+    ///   - text: The text to display.
+    ///   - image: The image associated with the live information.
+    init(text: LocalizedStringKey, image: ImageResource) {
+        self.text = text
+        self.image = image
+    }
     
     var body: some View {
         HStack(alignment: .top, spacing: 0) {

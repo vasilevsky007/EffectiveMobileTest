@@ -7,6 +7,11 @@
 
 import SwiftUI
 
+/// A view for displaying a list of favorite job vacancies.
+///
+/// `FavouritesView` presents a scrollable list of job vacancies marked as favorites by the user. It allows users to quickly access and view the details of their favorite vacancies.
+///
+/// Use this view to provide users with easy access to job vacancies they have marked as favorites and enhance their browsing experience.
 struct FavouritesView: View {
     @EnvironmentObject private var app: WorkAppSwiftUI
     

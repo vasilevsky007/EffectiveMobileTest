@@ -7,11 +7,30 @@
 
 import SwiftUI
 
+/// A custom text field with support for placeholder text, placeholder images, and error messages.
+///
+/// Use ``init(text:placehoderText:placeholderImage:errorMessage:)`` to create a styled text field with customizable placeholder text and image.
 struct PrettyTextField: View {
-    @Binding var text: String
-    var placehoderText: LocalizedStringKey?
-    var placeholderImage: String?
-    var errorMessage: LocalizedStringKey?
+    @Binding private var text: String
+    private let placehoderText: LocalizedStringKey?
+    private let placeholderImage: String?
+    private let errorMessage: LocalizedStringKey?
+    
+    /// Initializes a new instance of ``PrettyTextField``.
+    /// - Parameters:
+    ///   - text: The text binding for the field's input.
+    ///   - placehoderText: The localized placeholder text displayed when the field is empty.
+    ///   - placeholderImage: The name of the placeholder image to display.
+    ///   - errorMessage: The localized error message to display when there is an error.
+    init(text: Binding<String>,
+                placehoderText: LocalizedStringKey? = nil,
+                placeholderImage: String? = nil,
+                errorMessage: LocalizedStringKey? = nil) {
+        self._text = text
+        self.placehoderText = placehoderText
+        self.placeholderImage = placeholderImage
+        self.errorMessage = errorMessage
+    }
     
     var body: some View {
         VStack(alignment: .leading, spacing: DrawingConstants.standardSpacing) {
@@ -66,9 +85,11 @@ struct PrettyTextField: View {
         guard let placehoderText = placehoderText else { return nil }
         return Text(placehoderText).foregroundColor(.placeholder)
     }
+    
     private var isEmpty: Bool {
         text == ""
     }
+    
     private var noError: Bool {
         errorMessage == nil || errorMessage == ""
     }

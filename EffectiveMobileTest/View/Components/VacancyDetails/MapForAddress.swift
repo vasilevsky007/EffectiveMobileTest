@@ -8,10 +8,21 @@
 import SwiftUI
 import MapKit
 
+/// A map view displaying the location of an address.
+///
+/// `MapForAddress` displays a map with a marker indicating the location of a given address.
+///
+/// Use ``init(address:)`` to create a map view for displaying the location of a specific address.
 struct MapForAddress: View {
-    var address: Vacancy.Address
+    private let address: Vacancy.Address
     
     @State private var mark: MKMapItem?
+    
+    /// Initializes a new instance of ``MapForAddress``.
+    /// - Parameter address: The address for which to display the map.
+    init(address: Vacancy.Address) {
+        self.address = address
+    }
     
     var body: some View {
         Map(bounds: .init(MapCameraBounds(minimumDistance: 2000))) {

@@ -7,11 +7,32 @@
 
 import SwiftUI
 
+/// A block representing an offer.
+///
+/// `OfferBlock` displays an offer with an image, title, and an optional button.
+///
+/// Use ``init(imageName:imageBackground:title:buttonTitle:)`` to create a block for displaying an offer.
 struct OfferBlock: View {
-    var imageName: String
-    var imageBackground: Color = .accentDisabled
-    var title: LocalizedStringKey
-    var buttonTitle: LocalizedStringKey?
+    private let imageName: String
+    private let imageBackground: Color
+    private let title: LocalizedStringKey
+    private let buttonTitle: LocalizedStringKey?
+    
+    /// Initializes a new instance of ``OfferBlock``.
+    /// - Parameters:
+    ///   - imageName: The name of the image to display.
+    ///   - imageBackground: The background color of the image.
+    ///   - title: The title of the offer.
+    ///   - buttonTitle: The title of the optional button.
+    init(imageName: String, 
+         imageBackground: Color = .accentDisabled,
+         title: LocalizedStringKey,
+         buttonTitle: LocalizedStringKey? = nil) {
+        self.imageName = imageName
+        self.imageBackground = imageBackground
+        self.title = title
+        self.buttonTitle = buttonTitle
+    }
     
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {

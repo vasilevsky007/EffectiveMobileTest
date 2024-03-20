@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// A view modifier to add a number sticker to the content.
 struct NumberSticker: ViewModifier {
     let number: Int
     
@@ -36,6 +37,8 @@ struct NumberSticker: ViewModifier {
 }
 
 extension View {
+    /// Adds a ``NumberSticker``  to the view.
+    /// - Parameter number: The number to display in the sticker.
     func numberSticker(number: Int) -> some View {
         self.modifier(NumberSticker(number: number))
     }

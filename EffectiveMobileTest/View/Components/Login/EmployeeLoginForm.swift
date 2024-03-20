@@ -8,12 +8,20 @@
 
 import SwiftUI
 
+/// A form for employee login.
+///
+/// `EmployeeLoginForm` provides a form interface for employees to log in to the application. It includes fields for entering email or phone number and allows logging in with a password.
+///
+/// Use ``init()`` to create a login form for employees.
 struct EmployeeLoginForm: View {
     @EnvironmentObject private var coordinator: Coordinator
     @EnvironmentObject private var app: WorkAppSwiftUI
     
     @State var email = ""
     @State var error: LocalizedStringKey?
+    
+    /// Initializes a new instance of ``EmployeeLoginForm``.
+    init() {}
     
     var body: some View {
         VStack(alignment: .leading, spacing: DrawingConstants.doubleSpacing) {

@@ -7,11 +7,22 @@
 
 import SwiftUI
 
+/// A block representing a job vacancy.
+///
+/// `VacancyBlock` displays brief information about a job vacancy, including its title, salary, location, company, experience required, and publication date. Users can respond to the vacancy or mark it as a favorite.
+///
+/// Use ``init(vacancy:)`` to create a block for displaying a specific job vacancy.
 struct VacancyBlock: View {
     @EnvironmentObject private var app: WorkAppSwiftUI
     @EnvironmentObject private var coordinator: Coordinator
     
-    var vacancy: Vacancy
+    private let vacancy: Vacancy
+    
+    /// Initializes a new instance of ``VacancyBlock``.
+    /// - Parameter vacancy: The job vacancy to display.
+    init(vacancy: Vacancy) {
+        self.vacancy = vacancy
+    }
     
     var body: some View {
         VStack(alignment: .leading, spacing: DrawingConstants.VacancyBlock.spacing) {

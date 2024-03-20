@@ -7,7 +7,15 @@
 
 import SwiftUI
 
+/// A form for employer login.
+///
+/// `EmployerLoginForm` provides a form interface for employers to log in to the application. It includes options for posting vacancies and accessing the CV database.
+///
+/// Use ``init()`` to create a login form for employers.
 struct EmployerLoginForm: View {
+    /// Initializes a new instance of ``EmployerLoginForm``.
+    init() {}
+    
     var body: some View {
         VStack(alignment: .leading, spacing: DrawingConstants.doubleSpacing) {
             Text("Employee Search")

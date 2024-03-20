@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// struct namespacing all constants for view presenation. Contain nested structs for View-specific constants.
 struct DrawingConstants {
     static let cornerRadius: CGFloat = 8
     static let blockCornerRadius: CGFloat = 8
