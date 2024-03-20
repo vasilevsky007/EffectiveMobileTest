@@ -51,7 +51,7 @@ struct EmployeeLoginForm: View {
         }
         .padding(.horizontal, DrawingConstants.doubleSpacing)
         .padding(.vertical, DrawingConstants.tripleSpacing)
-        .background(Color.blockBackground, in: RoundedRectangle(cornerRadius: DrawingConstants.blockCornerRadius))
+        .background(Color.blockBackground, in: RoundedRectangle(cornerRadius: DrawingConstants.cornerRadius))
         .onChange(of: email) {
             withAnimation {
                 error = nil

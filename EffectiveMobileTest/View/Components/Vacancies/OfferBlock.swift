@@ -63,7 +63,7 @@ struct OfferBlock: View {
             width: DrawingConstants.OfferBlock.width,
             height: DrawingConstants.OfferBlock.height
         )
-        .background(Color.blockBackground, in: RoundedRectangle(cornerRadius: DrawingConstants.blockCornerRadius))
+        .background(Color.blockBackground, in: RoundedRectangle(cornerRadius: DrawingConstants.cornerRadius))
     }
 }
 

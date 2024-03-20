@@ -82,7 +82,7 @@ struct VacancyBlock: View {
                 .foregroundStyle(Color.placeholder)
             }
             .padding(DrawingConstants.doubleSpacing)
-            .background(Color.blockBackground, in: RoundedRectangle(cornerRadius: DrawingConstants.blockCornerRadius))
+            .background(Color.blockBackground, in: RoundedRectangle(cornerRadius: DrawingConstants.cornerRadius))
             .onTapGesture {
                 coordinator.push(.vacancyDetails(vacancy))
             }
